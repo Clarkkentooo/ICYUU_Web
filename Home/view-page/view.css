@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #FDFDFD;
+}
+
+nav {
+  margin-top: 10px;
+  background-color: white;
+  font-weight: 700;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 50px;
+}
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+nav a:hover {
+  background-color: #f0f0f0;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  font-weight: 700;
+  background-color: #F26935;
+  border: 2px #2C2C2C solid;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -6px 4px 0px #2C2C2C;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
+.sidebar a:hover {
+  border-radius: 18px;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+}
+.video-watch {
+  padding: 30px;
+}
+.video-watch .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.video-watch .box-container .box {
+  background: #FFAA00;
+  box-shadow: -6px 4px 0px #2C2C2C;
+  border-radius: 20px;
+  border: 4px #2C2C2C solid;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.video-watch .box-container .box .header-box {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  align-self: flex-start;
+}
+.video-watch .box-container .box .thumb {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 769px) {
+  .box-container {
+    margin-top: 40px;
+    margin-left: 80px;
+  }
+}/*# sourceMappingURL=view.css.map */

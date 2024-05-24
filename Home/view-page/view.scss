@@ -70,78 +70,15 @@ nav{
         display: none;
     }
 }
-.welcome-home{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.video-watch{
     padding: 30px;
-    flex-wrap: wrap;
-    gap: 2rem;
-    .welcome-message{
-        flex: 1 1 auto;
-        text-align: left;
-        margin-right: 20px;
-        font-size: xx-large;
-    }
-    .img-container{
-        flex: 1 1 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .hello-charac{
-            
-            height: auto;
-        }
-    }
-    
-}
-@media (min-width: 769px) {
-    .welcome-home{
-        margin-top: 50px;
-        margin-left: 50px;
-    }
-    .hello-charac{
-        max-width: 70%; 
-    }
-    .subHeader{
-        margin-top: 50px;
-        margin-left: 50px;
-    }
-    .box-container{
-        margin-top: 40px;
-        margin-left: 80px;
-    }
-}
-
-@media (max-width: 768px) {
-    .welcome-home {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .welcome-message {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    .hello-charac{
-        max-width: 100%;
-    }
-
-}
-.lessons{
-    padding: 30px;
-    .subHeader{
-        font-size: 28px;
-        margin-bottom: 20px;
-        text-align: left;
-    }
     .box-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
         gap: 1.5rem;
         align-items: flex-start;
         justify-content: center;
-    }
+
         .box{
             background: #FFAA00;
             box-shadow: -6px 4px 0px #2C2C2C;
@@ -167,23 +104,15 @@ nav{
                 height: auto;
                 margin-bottom: 25px;
             }
-            .view-btn {
-                background: #FFDD00;
-                color: #2C2C2C;
-                font-size: 15px;
-                font-weight: 600;
-                box-shadow: -3px 4px 0px #2C2C2C;
-                border-radius: 15px;
-                border: 2px #2C2C2C solid;
-                padding: 5px 20px;
-                text-decoration: none;
-                align-self: flex-END;
-                transition: background-color 0.3s ease;
-            }
-            .view-btn:hover {
-                background-color: #FFF08D;
-                box-shadow: -6px 3px 0px #2C2C2C;
-            }
+            
         }
+    }
+        
 }
+@media (min-width: 769px) {
 
+    .box-container{
+        margin-top: 40px;
+        margin-left: 80px;
+    }
+}
