@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C# Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #question {
+      margin-bottom: 20px;
+    }
+
+    #choices {
+      margin-bottom: 20px;
+    }
+
+    #score {
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>C# Quiz</h1>
+      <div id="question"></div>
+      <div id="choices"></div>
+      <button id="nextButton">Next Question</button>
+      <div id="score"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <script>
+    const questions = [
+      {
+        question: "What does C# stand for?",
+        choices: ["C Sharp", "C Share", "C Slash"],
+        correctAnswer: 0,
+      },
+      {
+        question: "Which of the following is NOT a data type in C#?",
+        choices: ["int", "real", "string"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Which of the following is string?",
+        choices: ["'hello'", "1", "true"],
+        correctAnswer: 0,
+      },
+      // Add more questions here...
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function displayQuestion() {
+      const questionElement = document.getElementById("question");
+      const choicesElement = document.getElementById("choices");
+
+      questionElement.textContent = questions[currentQuestion].question;
+      choicesElement.innerHTML = "";
+
+      questions[currentQuestion].choices.forEach((choice, index) => {
+        const button = document.createElement("button");
+        button.textContent = choice;
+        button.addEventListener("click", () => {
+          if (index === questions[currentQuestion].correctAnswer) {
+            score++;
+            document.body.style.backgroundColor = "green";
+          } else {
+            document.body.style.backgroundColor = "red";
+          }
+          // Disable all buttons after user's answer
+          choicesElement.querySelectorAll("button").forEach((button) => {
+            button.disabled = true;
+          });
+        });
+        choicesElement.appendChild(button);
+      });
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        displayQuestion();
+      } else {
+        displayScore();
+      }
+    }
+
+    function displayScore() {
+      const scoreElement = document.getElementById("score");
+      scoreElement.textContent = `Your score: ${score} / ${questions.length}`;
+    }
+
+    // Shuffle the questions array to randomize the order of questions
+    questions.sort(() => Math.random() - 0.5);
+
+    displayQuestion();
+    document
+      .getElementById("nextButton")
+      .addEventListener("click", nextQuestion);
+  </script>
+</html>
