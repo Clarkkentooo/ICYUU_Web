@@ -869,3 +869,6 @@ const questions = [
 
 // Ensure that we are selecting the element correctly
 console.log(scoreAppear);
+function exit(){
+    alert("Need to exit? Exiting will prompt a restart")
+}

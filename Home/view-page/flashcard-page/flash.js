@@ -860,3 +860,7 @@ const allQuestions  = [
   
   displayQuestion();
   document.getElementById("nextButton").addEventListener("click", nextQuestion);
+
+  function exit(){
+    alert("Need to exit? Exiting will prompt a restart")
+}
