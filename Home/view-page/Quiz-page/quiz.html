@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fundamentals of C#</title>
-    <link rel="stylesheet" href="view.css" />
+    <title>Quiz C#</title>
+    <link rel="stylesheet" href="quiz.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -148,56 +148,25 @@
         </li>
       </ul>
     </nav>
-
-    <section class="video-watch">
-      <div class="box-container2">
-        <div class="box2">
-          <h3 class="header-box2">C# Introduction</h3>
-          <h4 class="message">
-            C#, pronounced "C-sharp," is an object-oriented programming language
-            from Microsoft that enables developers to build applications that
-            run on the .NET platform. C# has its roots in the C family of
-            programming languages and shares many of the same characteristics as
-            those found in C and C++, as well as in Java and JavaScript.
-          </h4>
-          <br />
-          <h4>
-            The C# language was developed within Microsoft primarily by Anders
-            Hejlsberg, Scott Wiltamuth and Peter Golde. Microsoft released the
-            first widely distributed implementation of C# in July 2000 as part
-            of its .NET framework initiative. C# was intended to be a simple,
-            modern and general-purpose programming language that could be used
-            to develop software components for a distributed environment. The
-            newly released C# emphasized source code portability with support
-            for both hosted and embedded systems.
-          </h4>
-        </div>
+    <section class="main">
+      <div class="top-btn">
+        <a href="../view.html" class="btn-back">⇦&nbsp; Back</a>
       </div>
-      <div class="box-container">
-        <div class="box">
-          <h3 class="header-box">Fundamentals of C#</h3>
-          <iframe
-            class="thumb"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/YrtFtdTTfv0?si=N4sukCBqiiVvqDun"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+      <div class="container">
+        <h1>C# Asessment Quiz</h1>
+        <div id="quiz-container">
+          <form id="quiz-form">
+            <!-- Questions will be inserted here by JavaScript -->
+          </form>
+          <button id="submit-btn" class="btn hide">Submit Quiz</button>
+          <div id="results" class="hide">
+            <h2>Results</h2>
+            <div id="score"></div>
+            <div id="correct-answers"></div>
+          </div>
         </div>
-      </div>
-      <div class="buttons">
-        <a href="../view-page/flashcard-page/flash.html" class="btn1"
-          >〓&nbsp; FlashCard Quiz&nbsp; →</a
-        >
-        <a href="../view-page/Quiz-page/quiz.html" class="btn2"
-          >☶&nbsp; Asessment Quiz&nbsp; →</a
-        >
       </div>
     </section>
   </body>
-  <script src="view.js"></script>
+  <script src="quiz.js"></script>
 </html>
