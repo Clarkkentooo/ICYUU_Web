@@ -29,6 +29,7 @@ header{
         list-style-type: none
     }
     button{
+        cursor: pointer;
         padding: 10px 20px;
         background: #F26935;
         box-shadow:-2px 4px 0px #2C2C2C;
@@ -38,6 +39,12 @@ header{
         font-weight: 700;
         font-size: 14px;
         color: #F2F4F7;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        color:#2C2C2C;
+        background-color: #ffe862;
+        box-shadow: -6px 3px 0px #2C2C2C;
     }
 }
 section{
@@ -83,9 +90,17 @@ section{
             font-weight: 700;
             font-size: 14px;
             color: #F2F4F7;
-        }
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+    }
+    .home-btn:hover {
+        color:#2C2C2C;
+        background-color: #ffe862;
+        box-shadow: -6px 3px 0px #2C2C2C;
+    }
     }
     .home-image{
+        margin-top: 50px;
         display: flex;
         flex: 1 1 15rem;
         justify-content: center; 
@@ -101,21 +116,7 @@ section{
         }
     }
 }
-.empty{
-    width: 100%;
-    height: 5vh;
-}
-.empty2{
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    .wave{
-        display: flex;
-        width: 100%;
-        height: auto;
-    }
-    
-}
+
 .second-home{
     margin: 0px;
     display: flex;
@@ -132,8 +133,9 @@ section{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        
+        .text-title2{
+            width: 80%;
+        }
         .maintext2{
             margin: 0;
             font-size: 2rem;
@@ -151,7 +153,7 @@ section{
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 80%;
+            width: 100%;
             height: auto;
             
         }

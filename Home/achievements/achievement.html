@@ -50,7 +50,7 @@
             </svg>
           </a>
         </li>
-        <li><a href="#">Lessons</a></li>
+        <li><a href="../Home.html">Lessons</a></li>
         <li><a href="#">Achievements</a></li>
       </ul>
       <ul>
@@ -110,7 +110,7 @@
             </svg>
           </a>
         </li>
-        <li class="hideOnMobile"><a href="#">Lessons</a></li>
+        <li class="hideOnMobile"><a href="../Home.html">Lessons</a></li>
         <li class="hideOnMobile"><a href="#">Achievements</a></li>
         <li onclick="showSidebar()">
           <a href="#"
@@ -150,11 +150,44 @@
       </ul>
     </nav>
     <section class="main">
-      <a href="" class="score-show">Scores</a>
+      <h1 href="" class="name">🏆 Badges</h1>
       <div class="awards-container">
-        <img src="../ResourcesLP/1.png" alt="" />
+        <img src="../../ResourcesLP/1.png" alt="" id="one" onclick="Avail()" />
+        <img
+          src="../../ResourcesLP/2.png"
+          alt=""
+          id="two"
+          onclick="notAvailable()"
+        />
+        <img
+          src="../../ResourcesLP/3.png"
+          alt=""
+          id="three"
+          onclick="notAvailable()"
+        />
+
+        <img
+          src="../../ResourcesLP/4.png"
+          alt=""
+          id="four"
+          onclick="notAvailable()"
+        />
+        <img
+          src="../../ResourcesLP/5.png"
+          alt=""
+          class="blue"
+          id="five"
+          onclick="notAvailable()"
+        />
+        <img
+          src="../../ResourcesLP/6.png"
+          alt=""
+          id="six"
+          onclick="notAvailable()"
+        />
       </div>
     </section>
   </body>
   <script src="achievement.js"></script>
+  <script src="../view-page/Quiz-page/quiz.js"></script>
 </html>

@@ -7,6 +7,8 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none' 
 }
+
+
 const questions = [
     {
         question: "What does C# stand for?",
@@ -795,6 +797,7 @@ const questions = [
   const submitButton = document.getElementById("submit-btn");
   const resultsContainer = document.getElementById("results");
   const scoreElement = document.getElementById("score");
+  const scoreAppear = document.querySelector(".score-appear");
   const correctsElement = document.getElementById("correct-answers");
 
   function startQuiz() {
@@ -840,6 +843,7 @@ const questions = [
     const correctIndex = question.correct;
     const questionDiv =
     document.getElementsByClassName("question")[questionIndex];
+    
 
       // Highlight correct answer
     const labels = questionDiv.getElementsByTagName("label");
@@ -852,14 +856,9 @@ const questions = [
 
     resultsContainer.classList.remove("hide");
     scoreElement.innerText = `Your score: ${score}/${shuffledQuestions.length}`;
+    scoreAppear.innerText = `Your score: ${score}/${shuffledQuestions.length}`;
   }
-    // Store score and correct answers in localStorage
-    localStorage.setItem('quizScore', `${score}/${shuffledQuestions.length}`);
-    localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
 
-    // Redirect to the results page
-    window.location.href = 'results.html';
-    
   submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     showResults();
@@ -867,3 +866,6 @@ const questions = [
   });
 
   document.addEventListener("DOMContentLoaded", startQuiz);
+
+// Ensure that we are selecting the element correctly
+console.log(scoreAppear);
